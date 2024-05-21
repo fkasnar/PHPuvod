@@ -25,4 +25,4 @@ $a = 'Algebra' - ';
 $b = 'PHP ';
 $c = 'osnove';
 
-// Konkatenacija više stringova
+// Konkatenacija više stringova;
