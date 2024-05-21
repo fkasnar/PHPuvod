@@ -1,14 +1,30 @@
 <?php
 
-$a = 0;
-$a = $a + 1;
-$a++; // increment operator - povećaj vrijednost za jedan
+$a = 10;
+$b = 20;
 
-echo $a.'<br>';
+$a++; // Ekvivalent $a +1;
+++$b; // 21
 
-$a--; // decrement operator - smanji vrijednost za jedan
-// --$a;
+echo $b;//21
+echo '<br>';
 
-$b = $a++;
+echo $b--;//21
+echo '<br>';
 
-echo $b; // -> b = 1 -> prvo se pridružuje vrijednost pa se onda $a povećava za 1
+echo --$b;//19
+
+
+// prednost pri izvodjenju izraza
+// ()
+// !
+// */
+// %
+// +-
+// <> <= >=
+// !== !=
+// &&
+// ||
+
+
+?>
