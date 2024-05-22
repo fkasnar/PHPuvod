@@ -1,3 +1,28 @@
+
+<style>
+
+
+    h1{
+        color: rgb(6, 85, 125);
+    }
+    h2{
+        color: rgb(98, 107, 112);
+    }
+    p{
+        color: rgb(98, 107, 112);
+    }
+    body{
+        background-color: black;
+        color: rgb(130, 55, 63);
+        font-family: sans-serif;
+    }
+</style>
+
+
+
+
+
+
 <h1>PHP nizovi – vježba 1</h1>
 <p>
  Definirajte varijablu primeNumbers i dodijelite joj niz koji sadrži prvih pet primarnih<br>
@@ -62,6 +87,10 @@ rsort($primeNumbers);
 $values = array_values($primeNumbers);
 var_dump($values);
 ?>
+
+<br><br><br><br><br>
+<hr>
+<br><br><br><br><br>
 
 <h1>PHP nizovi – vježba 2</h1>
 <p>
