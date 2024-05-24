@@ -1,19 +1,5 @@
 <?php
 
-$names = ['Harry', 'Ron', 'Hermione'];
-
-// var_dump($names);
-echo '<br><br>';
-foreach ($names as $name) {
-    echo "$name, ";
-}
-
-echo '<br><br>';
-
-foreach ($names as $key => $name) {
-    echo ++$key . " - $name<br>";
-}
-
 $users = [
     [
         "id" => 1,
@@ -47,15 +33,18 @@ $users = [
     ]
 ];
 
-echo '<br><br>';
+?>
 
-foreach($users as $key => $user){
-    echo ++$key . '. ';
-    echo $user['name'] . ' - ' . $user['email'];
-    echo '<br>';
-    unset($users[--$key]['age']);//TODO: ponoviti i objasniti ovo unset($users[--$key])
-}
-
-echo '<pre>';
-print_r($users);
-echo '</pre>';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korisnici</title>
+</head>
+<body>
+    <table>
+        <!-- ispisati sadrzaj niza $users u HTML tablicu -->
+    </table>
+</body>
+</html>
