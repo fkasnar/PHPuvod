@@ -74,25 +74,22 @@ for ($i = 1; $i <= 10; $i++) {
     for ($j = 1; $j <= 10; $j++) {
         echo "$i x $j = " . ($i * $j) . "\n";
     }
-    echo "\n"; // Dodavanje praznog reda radi bolje čitljivosti
+    echo "\n";
 }
 
 echo "<br>Definirajte varijablu $names i dodijelite joj niz koji sadrži pet imena.<br>
 Koristeći petlju foreach, iz niza ispišite ključeve i pripadajuće im vrijednosti. <br>
  ";
 
- $names = ["Ana", "Ivan", "Marko", "Lucija", "Petar"];
+ $names = ["Petra", "Tea", "Filip", "Martina", "Petar"];
 
 foreach ($names as $key => $value) {
     echo "Ključ: $key, Vrijednost: $value\n";
 }
  // check this is no good
 
- echo "<br>Ispisati imena iz niza $names spojene sa zarezom i razmakom tako da iza zadnjeg imena ne budu zarez i razmak<br>
- Primjer:<br>
-     Harry, Ron, Hermione, Snake<br>
-     <br> ";
-     $names = ["Ana", "Ivan", "Marko", "Lucija", "Petar"];
+ echo "<br>Ispisati imena iz niza $names spojene sa zarezom i razmakom tako da iza zadnjeg imena ne budu zarez i razmak<br>";
+
      echo implode(", ", $names);
 
      echo "<br>Definirajte varijable a, b i c, te im istim redoslijedom dodijelite vrijednosti 5,10 i 15.<br>
@@ -100,10 +97,22 @@ foreach ($names as $key => $value) {
     Ako je uvjet istinit, ispišite da je b između a i c, a ako je uvjet lažan ispišite da nije.<br>
     Kod mora raditi i ako zamijenimo vrijednosti u varijablama a i c. <br>";
 
+    
+            $a = 5;
+            $b = 10;
+            $c = 15;
+
+            if (($b > $a && $b < $c) || ($b > $c && $b < $a)) {
+                echo "b je između a i c";
+            } else {
+                echo "b nije između a i c";
+            }
+
+
 
     echo "<br>Ispis dana u tjednu koristeći switch i funkciju date(): ";
 
-    $dan_u_tjednu = date("N"); // "N" daje numerički prikaz dana u tjednu (1 za ponedjeljak, 7 za nedjelju)
+    $dan_u_tjednu = date("N");
 
     switch ($dan_u_tjednu) {
         case 1:
