@@ -33,7 +33,7 @@
                 
                 <?php
          
-                        function sayHello()
+                        function sayHello() : string
                         {
                             return "Hello World! <br>";
                         }
