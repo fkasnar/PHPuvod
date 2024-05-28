@@ -73,32 +73,39 @@ rezultat.<br>
 
                 <?php
 
-                    function name()
-                    {
-                        return "MojeIme";
-                    }
 
-                    function surname()
-                    {
-                        return "MojePrezime";
-                    }
+                // Krivo - analiza!
+                //     function name()
+                //     {
+                //         return "MojeIme";
+                //     }
+                //     function surname()
+                //     {
+                //         return "MojePrezime";
+                //     }
 
-                    echo "Spajanje dviju varijabli 'name' i 'surname' u jednu varijablu a potom pozivanje iste: <br><br>";
+                //     echo "Spajanje dviju varijabli 'name' i 'surname' u jednu varijablu a potom pozivanje iste: <br><br>";
 
 
-                    $imeIPrezime = name() . " " . surname();
+                //     $imeIPrezime = name() . " " . surname();
 
-                    echo $imeIPrezime;
+                //     return $imeIPrezime;
 
-                    echo "<br><br>Ispisivanje funkcije velikim slovima: <br><br>";
+                //     echo "<br><br>Ispisivanje funkcije velikim slovima: <br><br>";
 
                     
-                    $allCapsImeIPrezime = strtoupper($imeIPrezime);
+                //     $makeAllCaps = strtoupper($imeIPrezime);
+                //    return $makeAllCaps();
                     
-                   echo $allCapsImeIPrezime;
-                    
+                function makeAllCaps(string $name, string $surname) : string {
+                    $fullName = "$name $surname";
+                    return mb_strtoupper($fullName);
+                }
 
+                $ime = makeAllCaps('Filip', 'Jakov');
+                echo $ime;
 
+                echo "<br>";
                 ?>
 
 
