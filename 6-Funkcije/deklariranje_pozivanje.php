@@ -18,3 +18,5 @@ function writeName(string $name): void
 }
 
 writeName('Mario');
+
+//void upisujemo ako ne zelimo da funkcija nista ne vraca nazad nakon izvrsenja HTMLu>PHPu.
