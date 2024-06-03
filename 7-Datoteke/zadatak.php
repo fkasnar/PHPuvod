@@ -93,8 +93,8 @@ $polaznici[] = $noviPolaznik;
 
 //Ispis tablice
 echo tablica($polaznici);
-?>
 
+?>
 </body>
 </html>
 
