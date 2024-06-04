@@ -64,12 +64,53 @@
         datoteku -->
 
 
-        <form method="post" action="/10-Parcijalni_ispit/parcijalni_ispit_obrada.php">
+        <form method="post" action="/10-Parcijalni_ispit/parcijalni_ispit.php">
             <label for="upisanarijec">Upišite riječ: </label><br>
             <input type="text" id="upisanarijec" name="upisanarijec" value="" placeholder="Random word"><br>
             <input type="submit" value="Pošalji">
         </form>
 
+        <?php
+
+$podatak = $_POST;
+
+$rijec = $podatak['upisanarijec'];
+$brojslova = strlen($rijec);
+
+//Suglasnici
+
+$samoSuglasnici = preg_replace("/[^bcčćdđfgghjklmnpqrsštvzžBCČĆDĐFGGHJKLMPQRSŠTVZŽ]/u", "", $rijec);
+$brojSuglasnika = strlen($samoSuglasnici);
+
+//Samoglasnici
+$samoSamoglasnici = preg_replace("/[^aeiouAEIOU]/u", "", $rijec);
+$brojSamoglasnika = strlen($samoSamoglasnici);
+
+if( !empty($rijec === '') ){
+    echo "Molimo napišite riječ. <br>";
+    die();
+}
+
+echo "Odabrana riječ je: $rijec <br>
+        Niže je izračun broja slova, samoglasnika i suglasnika. <br>";
+
+?>
+
+<!-- //IZRAČUN I KREIRANJE TABLICE -->
+<table>
+<tr>
+<th> RIJEČ </th>
+<th> BROJ SLOVA </th>
+<th> BROJ SUGLASNIKA </th>
+<th> BROJ SAMOGLASNIKA </th>
+</tr>
+<tr>
+<td><?php echo ' ' . $rijec  ?></td>
+<td><?php echo ' ' . $brojslova  ?></td>
+<td><?php echo ' ' . $brojSuglasnika  ?></td>
+<td><?php echo ' ' . $brojSamoglasnika ?></td>
+</tr>
+</table>
         
     
 </body>
