@@ -3,7 +3,6 @@
 <body>
 
 <style>
-        /* Apply the following styles to the entire page */
         body {
             display: flex;
             justify-content: center;
@@ -16,7 +15,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Center all content inside the body */
         .container {
             width: 100%;
             display: flex;
@@ -24,8 +22,6 @@
             align-items: center;
             flex-direction: column;
         }
-
-        /* Style forms to have rounded corners and be twice as big */
         form {
             
             padding: 20px;
@@ -35,7 +31,6 @@
             color: grey;
         }
 
-        /* Style form inputs */
         form input, form textarea, form select, form button {
             border-radius: 10px;
             margin: 10px 0;
@@ -45,7 +40,6 @@
             color: grey;
         }
         
-        /* Ensure buttons have appropriate styles */
         form button {
             background-color: grey;
             color: black;
