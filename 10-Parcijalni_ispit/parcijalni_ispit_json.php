@@ -47,6 +47,21 @@
 
 
     </style>
+
+            <!-- //ZADATAK
+        Treba kreirati aplikaciju (vidi sliku) koja će iz
+        datoteke words.json u desnu tablicu ispisati sve
+        riječi koje su analizirane. 
+                     S lijeve strane treba kreirati obrazac kroz koji će
+                    se unositi nova riječ.
+                     Unesenu riječ treba obraditi na sljedeći način:
+                             polje ne smije biti prazno
+                             izbrojiti broj slova u riječi
+                             izbrojiti suglasnike i samoglasnike u 
+                            riječi (za ovu funkcionalnost kreirajte
+                            funkcije).
+         Obrađenu riječ treba zapisati u words.json
+        datoteku -->
     
 <form method="post" action="/10-Parcijalni_ispit/parcijalni_ispit_json.php">
             <label for="upisanarijec">Upišite riječ: </label><br>
