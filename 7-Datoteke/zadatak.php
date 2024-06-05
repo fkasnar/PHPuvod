@@ -7,7 +7,6 @@
 </head>
 <body>
 
-<!-- Da me oči ne bole-->
 <style>
     body {
     font-family: Arial, sans-serif;
