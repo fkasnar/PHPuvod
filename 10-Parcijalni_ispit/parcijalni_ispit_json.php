@@ -49,19 +49,19 @@
     </style>
 
             <!-- //ZADATAK
-        Treba kreirati aplikaciju (vidi sliku) koja će iz
-        datoteke words.json u desnu tablicu ispisati sve
-        riječi koje su analizirane. 
-                     S lijeve strane treba kreirati obrazac kroz koji će
-                    se unositi nova riječ.
-                     Unesenu riječ treba obraditi na sljedeći način:
-                             polje ne smije biti prazno
-                             izbrojiti broj slova u riječi
-                             izbrojiti suglasnike i samoglasnike u 
-                            riječi (za ovu funkcionalnost kreirajte
-                            funkcije).
-         Obrađenu riječ treba zapisati u words.json
-        datoteku -->
+            Treba kreirati aplikaciju (vidi sliku) koja će iz
+            datoteke words.json u desnu tablicu ispisati sve
+            riječi koje su analizirane. 
+             S lijeve strane treba kreirati obrazac kroz koji će
+            se unositi nova riječ.
+             Unesenu riječ treba obraditi na sljedeći način:
+                     polje ne smije biti prazno
+                     izbrojiti broj slova u riječi
+                     izbrojiti suglasnike i samoglasnike u 
+                    riječi (za ovu funkcionalnost kreirajte
+                    funkcije).
+             Obrađenu riječ treba zapisati u words.json
+                    datoteku -->
     
 <form method="post" action="/10-Parcijalni_ispit/parcijalni_ispit_json.php">
             <label for="upisanarijec">Upišite riječ: </label><br>
@@ -72,15 +72,16 @@
 
 <?php
 
-$dataDir = __DIR__ . "/rijeci";
-const FILE_PATH = __DIR__ . "/querySave.json";
+        $dataDir = __DIR__ . "/rijeci";
+        const FILE_PATH = __DIR__ . "/querySave.json";
 
-//Provjera jel JSON file postoji, ako ne, kreirati ce ga.
-if (!file_exists(FILE_PATH)) {
-    file_put_contents(FILE_PATH, "[]");
-}
+        //Provjera jel JSON file postoji, ako ne, kreirati ce ga.
+        if (!file_exists(FILE_PATH)) {
+            file_put_contents(FILE_PATH, "[]");
+        }
 
 ///////////////////////////////////////////////////////PISANJE U JSON
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Uzmi i enkodiraj u json
@@ -100,18 +101,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($existing_data, JSON_PRETTY_PRINT);
     }
 
-    // Spremanje inputa iz forme u json.
-    $rijec = ($_POST['rijec']);
+        // Spremanje inputa iz forme u json.
+        $rijec = ($_POST['rijec']);
 
-    // Piši inpute u JSON
-    if (file_put_contents(FILE_PATH, get_data($rijec))) {
-        echo 'Ispod je rješenje Vašeg upita.';
-    } else {
-        echo 'Neuspješno, pokušajte ponovo.';
+        // Piši inpute u JSON
+        if (file_put_contents(FILE_PATH, get_data($rijec))) {
+            echo 'Ispod je rješenje Vašeg upita.';
+        } else {
+            echo 'Neuspješno, pokušajte ponovo.';
+        }
     }
-}
 
 ///////////////////////////////////////////////////////Čitanje JSONa
+
+
 function get_latest_word() {
     $file_path = FILE_PATH; // Use constant for file path
 
@@ -120,11 +123,11 @@ function get_latest_word() {
         $data = json_decode(file_get_contents($file_path), true);
 
      
-        //Uzmi zadnji input unešen putem forme u JSON (radi obrade - izračuna)
-        if (!empty($data)) {
-            $last_entry = end($data);
-            return $last_entry['Rijec'];
-        }
+    //Uzmi zadnji input unešen putem forme u JSON (radi obrade - izračuna)
+    if (!empty($data)) {
+        $last_entry = end($data);
+        return $last_entry['Rijec'];
+    }
     }
 
     return null;
@@ -132,7 +135,7 @@ function get_latest_word() {
 
 $latest_word = get_latest_word();
 
-///////////IZRAČUN
+//IZRAČUN
 
 if ($latest_word !== null) {
     $brojslova = strlen($latest_word);
