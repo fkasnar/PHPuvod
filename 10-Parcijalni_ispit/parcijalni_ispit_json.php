@@ -138,12 +138,12 @@ if ($latest_word !== null) {
     $brojslova = strlen($latest_word);
 
 //Suglasnici
-$samoSuglasnici = preg_replace("/[^bcčćdđfgghjklmnpqrsštvzžBCČĆDĐFGGHJKLMPQRSŠTVZŽ]/u", "", $latest_word);
-$brojSuglasnika = strlen($samoSuglasnici);
+$samoSamoglasnici = preg_replace("/[^bcčćdđfgghjklmnpqrsštvzžBCČĆDĐFGGHJKLMPQRSŠTVZŽ]/u", "", $latest_word);
+$brojSamoglasnika = strlen($samoSuglasnici);
 
 //Samoglasnici
-$samoSamoglasnici = preg_replace("/[^aeiouAEIOU]/u", "", $latest_word);
-$brojSamoglasnika = strlen($samoSamoglasnici);
+$samoSuglasnici = preg_replace("/[^aeiouAEIOU]/u", "", $latest_word);
+$brojSuglasnika = strlen($samoSamoglasnici);
 
 
 }
@@ -159,8 +159,8 @@ $brojSamoglasnika = strlen($samoSamoglasnici);
 <tr>
 <td><?php echo ' ' . $latest_word  ?></td>
 <td><?php echo ' ' . $brojslova  ?></td>
-<td><?php echo ' ' . strlen($samoSuglasnici)  ?></td>
-<td><?php echo ' ' . strlen($samoSamoglasnici) ?></td>
+<td><?php echo ' ' . strlen($samoSamoglasnici)  ?></td>
+<td><?php echo ' ' . strlen($samoSuglasnici) ?></td>
 </tr>
 </table>
 
